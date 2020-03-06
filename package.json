@@ -1,0 +1,26 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plbin97/chat.git"
+  },
+  "author": "Linbin Pang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plbin97/chat/issues"
+  },
+  "homepage": "https://github.com/plbin97/chat#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "express": "^4.17.1",
+    "express-ws": "^4.0.0",
+    "ws": "^7.2.1"
+  }
+}
