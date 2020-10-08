@@ -4,9 +4,11 @@
  */
 let echoTest = (ws) => {
     ws.on("message", (msg) => {
-        if (msg === "ping") {
-            ws.send("pong");
-        }
+        console.log(msg);
+        ws.send(msg);
+    })
+    ws.on("close", (reasonCode, description) => {
+        console.log("Closed: " + reasonCode + " | " + description);
     })
 };
 module.exports = echoTest;

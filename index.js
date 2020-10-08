@@ -4,7 +4,7 @@ let config = require('./config');
 let echoTest = require('./src/echoTest');
 require('express-ws')(app);
 
-app.get('/', express.static('./fontEnd'));
+app.get('/*', express.static('./fontEnd/public'));
 
 app.ws('/test', echoTest);
 
