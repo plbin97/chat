@@ -5,7 +5,7 @@ let echoTest = require('./src/echoTest');
 let chatRoomTest = require('./src/chatRoomTest');
 require('express-ws')(app);
 
-app.get('/*', express.static('./fontEnd/public'));
+app.get('/*', express.static('./FrontEnd/public'));
 
 app.ws('/test/:par', echoTest);
 
