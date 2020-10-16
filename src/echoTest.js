@@ -1,8 +1,6 @@
-/**
- * Just an echo test for testing latency or connectivity
- * @param ws
- */
-let echoTest = (ws) => {
+
+let echoTest = (ws,req) => {
+    console.log(req.params["par"]);
     ws.on("message", (msg) => {
         console.log(msg);
         ws.send(msg);

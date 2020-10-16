@@ -7,7 +7,7 @@ require('express-ws')(app);
 
 app.get('/*', express.static('./fontEnd/public'));
 
-app.ws('/test', echoTest);
+app.ws('/test/:par', echoTest);
 
 app.ws('/chattest',chatRoomTest);
 
