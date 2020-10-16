@@ -11,10 +11,12 @@ import {audioEncode, audioDecode} from "./workerComunicator";
  * @returns {Promise<Blob>}
  */
 let encoder = async (audioBuffer) => {
-     let arrayBuffer = audioBuffer.getChannelData(0);
-    // let newBlob = await audioEncode(arrayBuffer);
-    // return newBlob;
-    return new Blob([arrayBuffer]);
+    let arrayBuffer = audioBuffer.getChannelData(0);
+    // Put your code here
+
+    let newBlob = new Blob([arrayBuffer]);
+    // You have to return a blob object in the encoder
+    return newBlob;
 };
 
 /**
@@ -30,7 +32,7 @@ let decoder = async (blob) => {
 
     // You have to transfer your PCM data to Float32Array
     let floatArr = new Float32Array(array);
-    let audioBuffer = createAudioBufferByArrayBuffer(floatArr);
+    let audioBuffer = createAudioBufferByArrayBuffer(floatArr, 44100);
     // You have to return an audioBuffer object in the decoder
     return audioBuffer;
 };
